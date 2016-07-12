@@ -6,8 +6,8 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>f6126ddc-3472-4128-bd87-ce4dafda035a</ProjectGuid>
-    <RootNamespace>RAdams.FileUtilities.Core</RootNamespace>
+    <ProjectGuid>8456c5f7-ed1a-4d1f-b0f8-fa140e4ab836</ProjectGuid>
+    <RootNamespace>RAdams.FileUtilities.FileIndexer</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
