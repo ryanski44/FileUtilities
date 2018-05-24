@@ -18,10 +18,15 @@ namespace RAdams.FileUtilities.Core
 
         public FileIndex(DirectoryInfo directory, IndexerOptions options) : this()
         {
+            Parse("", directory, options);
+        }
+
+        private void Parse(string prefix, DirectoryInfo directory, IndexerOptions options)
+        {
             foreach (var file in directory.GetFiles())
             {
                 FileIndexEntry entry = new FileIndexEntry();
-                entry.FileName = file.Name;
+                entry.FileName = prefix + file.Name;
                 entry.FileLength = file.Length;
 
                 if (options.HasFlag(IndexerOptions.IncludeHash))
@@ -31,11 +36,13 @@ namespace RAdams.FileUtilities.Core
 
                 entries[entry.FileName] = entry;
             }
-            //TODO: recursive
-            //if(options.HasFlag(IndexerOptions.Recursive))
-            //{
-
-            //}
+            if (options.HasFlag(IndexerOptions.Recursive))
+            {
+                foreach(var subDir in directory.GetDirectories())
+                {
+                    Parse(prefix + subDir.Name + "\\", subDir, options);
+                }
+            }
         }
 
         public FileIndex(FileInfo indexFile ) : this()

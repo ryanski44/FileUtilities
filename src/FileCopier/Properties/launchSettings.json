@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "FileCopier": {
-      "commandName": "Project",
-      "commandLineArgs": "y:\\temp Y:\\temp\\fileindexer\\prod.index y:\\temp y:\\temp\\fileindexer\\dev.index"
-    }
-  }
-}

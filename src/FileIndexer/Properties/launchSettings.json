@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "FileIndexer": {
-      "commandName": "Project",
-      "commandLineArgs": "z:\\ Y:\\temp\\fileindexer\\test.index"
-    }
-  }
-}
